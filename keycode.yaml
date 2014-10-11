@@ -1,0 +1,12 @@
+up:
+  27: A
+down:
+  27: B
+right:
+  27: C
+left:
+  27: D
+enter: 10
+delete: 127
+C-d: 4
+C-x: 24

@@ -1,0 +1,8 @@
+up: BufferCommand::move_up
+down: BufferCommand::move_down
+right: BufferCommand::move_right
+left: BufferCommand::move_left
+enter: BufferCommand::change_line
+delete: BufferCommand::delete
+C-d: Rows::BufferCommand::delete_line
+C-x: exit
