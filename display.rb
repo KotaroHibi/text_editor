@@ -36,7 +36,7 @@ class Display
     clear_screen
     @window_list.each do |window|
       buffer   = window.buffer
-      contents = buffer.contents
+      contents = buffer.content.content
       for i in 0..contents.size do
         window.cursor.set_position(i, 0)
         insert_string(contents[i]) unless contents[i].nil?

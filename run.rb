@@ -3,6 +3,7 @@ require './curses_api'
 require './display'
 require './keyboard'
 require './command'
+require './exceptions'
 require 'yaml'
 require 'pp'
 

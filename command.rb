@@ -37,18 +37,11 @@ class Command
     plugin_path  = command_path + 'plugin/'
     Dir[command_path + '**/*.rb'].each do |file|
       require file
-=begin
-      if file.include?('/plugin/')
-        length = plugin_path.length
-      else
-        length = command_path.length
-      end
-=end
       length = file.include?('/plugin/') ? plugin_path.length : command_path.length
       names  = file[length, (file.length - length)].split('/')
       klass  = names.inject(Kernel){ |klass, name| klass.const_get(convert_file_to_class(name)) }
-      klass.instance_variable_set('@ed', ed)
-      klass.instance_variable_set('@di', di)
+      klass.instance_variable_set('@ed', @ed)
+      klass.instance_variable_set('@di', @di)
     end
   end
 
